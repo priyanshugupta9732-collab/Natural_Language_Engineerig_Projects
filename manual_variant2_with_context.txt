@@ -1,0 +1,68 @@
+You are an information extraction system for recipe reviews.
+Task: find every phrase in the review that names a food ingredient and map it to ONE label from the fixed label list below.
+Rules:
+- "mention" is the phrase as it appears in the review, without quantities.
+- "label" must be copied exactly from the label list. If no label fits, use "OTHER".
+- Do NOT return the name of the dish that is being reviewed, cooking equipment, or generic words.
+- Words like the following are NOT ingredients: as desired, optional, garnish, toothpick, skewer, canning jar, cedar plank, freshly, boned, can, regular, up, or, each, roll, mix, sprinkle, topping.
+- Beware of compounds: "butter bean" is not butter, "sugar cookie" is a dish, "egg roll wrap" is not egg.
+- Return each distinct ingredient once.
+
+LABEL LIST (385 labels):
+adobo seasoning; alfredo; allspice; almond; almond extract; almond milk; american cheese; anchovy; anise/star anise; apple; apple cider vinegar; apple juice/cider; applesauce; apricot; artichoke; asiago/fontina; asian sauces (other); asparagus; avocado; bacon; bagel; baking powder; baking soda; balsamic vinegar; banana; barley; basil; bay leaf; bbq sauce; bean sprouts; beans (unspecified); beef; beer; beet; bell pepper; biscuits; black beans; blackberry; blue cheese; blueberry; bok choy; bouillon; bread; breadcrumbs; brie; brine; brisket; broccoli; broth/stock; brown sugar; brussels sprouts; buckwheat/other grains; bulgur/farro/millet; butter; buttermilk; cabbage; cajun/creole seasoning; cake (prepared); cake/brownie mix; cantaloupe/melon; capers; caramel/toffee; cardamom; carrot; cashew; cauliflower; cayenne; celeriac/kohlrabi; celery; cereal (cornflakes etc.); cheddar; cheese; cherry; chia seeds; chicken; chicken breast; chickpeas; chile peppers; chili powder; chocolate; chocolate chips; chorizo; chutney; cilantro; cinnamon; clam; cloves (spice); cocoa; coconut; coconut milk; coconut oil; coffee; cookies (unspecified); cooking spray; corn; cornbread; corned beef; cornstarch; cottage cheese; couscous; crab; crackers; cranberry; crawfish; cream; cream cheese; cream of celery soup; cream of chicken soup; cream of mushroom soup; cream of tartar; cream soup (other); creme fraiche; crescent rolls; croissant; croutons; crumbs (unspecified); cucumber; cumin; curry (powder/paste); dates; dill; dough (unspecified); dressing (other); dried fruit; dry rub; duck; edamame; egg; eggnog; eggplant; enchilada sauce; english muffin; evaporated milk; extract (other); fennel; feta; figs; fish; fish sauce; flaxseed; flour; food coloring; fruit (unspecified); fudge/hot fudge; game meat; garam masala; garlic; garlic powder; gelatin/jello; ginger; ginger ale; gingersnaps; gnocchi; goat cheese; gouda; grapefruit; grapes; gravy; green beans; green onion; grits/polenta; ground beef; gruyere; ham; hazelnut; herbs (unspecified); hoisin; hominy; honey; hot dog; hot sauce; ice cream; icing/frosting; italian dressing; italian seasoning; jam/jelly/preserves; jicama; juice (unspecified); kaffir lime; kale; ketchup; kidney beans; kielbasa; kiwi; lamb; lard; lasagna noodles; leek; lemon; lemonade; lemongrass; lentils; lettuce; lima beans; lime; linguine/fettuccine; liquid smoke; liquor/spirits; lobster; m&ms; macadamia; macaroni; mace; mango; maple syrup; margarine; marinade; marjoram; marshmallows; mascarpone; matzo; mayonnaise; meat (unspecified); meatballs; milk; mint; mirin; miso; molasses; monterey jack; mozzarella; mushroom; mustard; nectarine; noodles; nutella; nutmeg; nuts; oats; oil; okra; old bay; olive oil; olives; onion; onion powder; onion soup mix; orange; oregano; oreos; orzo; oyster sauce; papaya; paprika; parmesan; parsley; parsnip; pasta (unspecified); peach; peanut; peanut butter; pear; peas; pecan; pectin; penne; pepper; pepper jack; pepperoni; pesto; pickle; pie crust; pine nuts; pineapple; pinto beans; pistachio; pita/naan; pizza dough; plantain; plum; pomegranate; popcorn; poppy seeds; pork; potato; poultry seasoning; powdered sugar; preserves/jam; pretzels; prosciutto; protein powder; provolone; prunes; pudding; puff pastry; pumpkin; pumpkin pie spice; pumpkin seeds; queso fresco/paneer; quinoa; radish; raisins; ranch dressing; ranch seasoning; raspberry; red wine vinegar; refried beans; rhubarb; ribs; rice; ricotta; rolls/buns; romano/pecorino; rosemary; roux; saffron; sage; salami; salmon; salsa; salt; sauce (unspecified); sauerkraut; sausage; scallop; seasoning (unspecified); seaweed; seeds (unspecified); semolina; sesame oil; sesame seeds; shallot; sherbet/sorbet; sherry/marsala/port; shortbread; shortening; shrimp; soda/soft drink; sour cream; soy sauce; spaghetti; spices (unspecified); spinach; squash; squid/calamari; steak; steak seasoning; strawberry; stuffing; sugar; sumac/za'atar; sunflower seeds; sweet potato; sweetened condensed milk; sweeteners (artificial); swiss cheese; taco seasoning; tahini; tamarind; tarragon; tea; teriyaki; thyme; tofu; tomatillo; tomato; tomato paste; tomato sauce; tomato soup; tortellini/ravioli; tortilla; tuna; turkey; turmeric; turnip; vanilla; veal; vegetables (unspecified); venison; vinegar; wafers/ladyfingers; walnut; water; water chestnuts; watermelon; wheat germ/bran; whipped cream/cool whip; white beans; white sauce/bechamel; wine; worcestershire; xanthan gum; yeast; yogurt; zucchini
+
+Each review gets a list like [{"mention": "lemon juice", "label": "juice (unspecified)"}].
+
+You will receive 25 numbered reviews below. Treat each review separately. Answer with ONE JSON object whose keys are the review numbers ("1" ... "25"), each value being the list described above. JSON only, no explanation. Use an empty list if a review contains no ingredient.
+
+REVIEWS:
+
+[1] Very good cake, liked by all. I only put 2 Tblsp of the lime juice in the frosting. That was plenty, it didnt need anymore, would have been way to tart.
+
+[2] These were really delicious. I was out of bacon (and bacon pieces) so I just added some melted bacon grease. I cut the brown sugar down to about 75%. My regular recipe calls for mustard and worcestershire sauce, I might add this next time. By the way, I drained the beans and this dish was still plenty 'soupy' enough that I had to serve with a slotted spoon. Everyone in my family liked these.
+
+[3] This was very easy to make for someone like me who doesn't cook much. I think I would like it better though with 1/2 the amount of cheese mixture. My husband ate 2 chops and liked it very much (he is an AWESOME cook and doesn't eat anything that doesn't taste great). Nice recipe.
+
+[4] As written, I give this four stars because I think it is too sweet. I reduced the sugar to 1/2 cup and still found it way to sweet. However, I thought the texture was excellent and the flavor really nice. I will make it again, reducing the sugar to 1/4 cup.
+
+[5] I just made these cookies and they turned out o.k. The only complaint I have are that they flatten out and crumble. I dont know where I went wrong, but they came out burnt around the edges were they had flattened out..
+
+[6] We had these for dinner with pork chops, YUMMY! I added a whole extra onion, next time I may even add another one because they were soooo good! And I thought it was easier to just mix everything together in a bowl and then pour it onto a baking sheet. Great recipe! Will definitely make again!
+
+[7] The only change I made was to reduce the water by 2 cups. It made for a thick, hearty flavorful soup that everyone in my family enjoyed! My younger daughter and I kept the 'secret' ingredient (spicy V8) a secret... or my older daughter would never try something with a 'hot and spicy' ingredient. She was fooled and loved it. It made a great dinner, next day lunches for the kids, and plenty to freeze for next time.
+
+[8] I loved this recipe!!! I used 1 can of marinated artichokes and one plain. I loved the lemon & fresh parsley. I'm telling you this one rocks!! I would give it 10 stars if possible.
+
+[9] Wow, awesome. Reminds me of the chicken salad sandwiches my wife and I got at The Paris in Vegas. Next time I'll try it with some roasted chicken instead of the tuna.
+
+[10] Easy, pretty and delicious! I used brown sugar and unsalted butter. Reduced salt to 1/2 tsp and used 2 c. white whole wheat flour.
+
+[11] I've made these numerous times (as written) and am always so happy with the result! This has become a staple dish at our house.
+
+[12] These were good. I made them in bite size form instead of the pretzel as quite a few people were going to eat them. I would make these again.
+
+[13] I made a huge massive size of this recipe the night before my daughter's party. Then the next morning I turned it on in the crock pots...it was really yummy. Overall everybody loved it.
+
+[14] I had a lot of company sort of unexpectedly this evening and didn't know what I could feed them all. This really did the trick! Everyone said it was awesome. Thanks for the great recipe! It got me out of a pinch today!
+
+[15] Absolutely loved it! Best ever! I think it should call for 2-16oz bags of coleslaw though. It definitely gets runny after a bit. I used seasoned rice wine vinegar instead of white wine.Also, I thought about lessening the sugar but I didn't and thought it was fabulous. This is a keeper!
+
+[16] 4.5 stars! Do not decrease the sugar, but do add 1/8tsp salt. The salt will balance everything out. I particularly like this served warm on berries and sponge cake. Ignore the reviewers who say this tastes like Jello brand pudding, this has more depth than Jello will ever have!
+
+[17] These are very yummy, easy beans. Instead of ham hock, however, I put some have stock granuals in with the water and it turned out wonderfully. I'll make these again sometime :)
+
+[18] Absolutely awesome. The only change I made was to accomadate what was in the freezer. I used thin sliced chops cut to medallion size. It is one I will definately serve to family and as a special treat for guests. Thank you Audrey
+
+[19] Absolutely a great recipe! Followed a few of the previous reviewers' suggestions and added additional seasonings. Rolling was difficult, but manageable. I will butterfly the chicken breasts next time to save time. Family loved it!
+
+[20] I double the liquid and turn the beef so it gets extra saturated. My very picky Chicago-born boyfriend loves this recipe. It's divine the next day.
+
+[21] It is different than I know. I wanted to branch out, try something new and I did. Will not be using tin foil again (baaaad choice to line the container with. lol).
+
+[22] I LOVE butter!!! I have been making butter since I was eleven. It is great on Wardee's homemade sourdough bread. I take the cream off our raw milk and use 100% natural salt. Yummy!!!
+
+[23] My son requested ice cream sandwiches instead of a cake for his Birthday. Ok, that was a go! I just subbed Choc Chip ice cream, as that is the overwhelming family fave. As long as you let these sit in the freezer for a good couple of hours( I have nooooo patience!) they are to die for! Thank you for a new favorite!
+
+[24] I make a recipe similar to this only I add 2 cans cream of mushroom soup, and 1/2 can water. I add a bag a baby carrots and box of mushrooms and a bay leaf and 1tsp kitchen boq. The carrots are so soft by the time it done cooking and If you are really up to it make some home made white bread and it all goes perfect togeather.
+
+[25] I paid attention to those who thought it was too sweet and reduced the amount of sugar I used. Mistake. With the tamarind paste and vinegar, the amount of sugar in the recipe is appropriate.

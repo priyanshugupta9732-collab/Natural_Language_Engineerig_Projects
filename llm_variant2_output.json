@@ -1,0 +1,262 @@
+{
+ "1": [
+  {
+   "mention": "lime juice",
+   "label": "lime"
+  },
+  {
+   "mention": "frosting",
+   "label": "icing/frosting"
+  }
+ ],
+ "2": [
+  {
+   "mention": "bacon",
+   "label": "bacon"
+  },
+  {
+   "mention": "bacon grease",
+   "label": "bacon"
+  },
+  {
+   "mention": "brown sugar",
+   "label": "brown sugar"
+  },
+  {
+   "mention": "mustard",
+   "label": "mustard"
+  },
+  {
+   "mention": "worcestershire sauce",
+   "label": "worcestershire"
+  },
+  {
+   "mention": "beans",
+   "label": "beans (unspecified)"
+  }
+ ],
+ "3": [
+  {
+   "mention": "cheese mixture",
+   "label": "cheese"
+  }
+ ],
+ "4": [
+  {
+   "mention": "sugar",
+   "label": "sugar"
+  }
+ ],
+ "5": [],
+ "6": [
+  {
+   "mention": "onion",
+   "label": "onion"
+  }
+ ],
+ "7": [
+  {
+   "mention": "water",
+   "label": "water"
+  },
+  {
+   "mention": "spicy V8",
+   "label": "juice (unspecified)"
+  }
+ ],
+ "8": [
+  {
+   "mention": "marinated artichokes",
+   "label": "artichoke"
+  },
+  {
+   "mention": "lemon",
+   "label": "lemon"
+  },
+  {
+   "mention": "fresh parsley",
+   "label": "parsley"
+  }
+ ],
+ "9": [
+  {
+   "mention": "roasted chicken",
+   "label": "chicken"
+  },
+  {
+   "mention": "tuna",
+   "label": "tuna"
+  }
+ ],
+ "10": [
+  {
+   "mention": "brown sugar",
+   "label": "brown sugar"
+  },
+  {
+   "mention": "unsalted butter",
+   "label": "butter"
+  },
+  {
+   "mention": "salt",
+   "label": "salt"
+  },
+  {
+   "mention": "white whole wheat flour",
+   "label": "flour"
+  }
+ ],
+ "11": [],
+ "12": [],
+ "13": [],
+ "14": [],
+ "15": [
+  {
+   "mention": "coleslaw",
+   "label": "cabbage"
+  },
+  {
+   "mention": "seasoned rice wine vinegar",
+   "label": "vinegar"
+  },
+  {
+   "mention": "white wine",
+   "label": "wine"
+  },
+  {
+   "mention": "sugar",
+   "label": "sugar"
+  }
+ ],
+ "16": [
+  {
+   "mention": "sugar",
+   "label": "sugar"
+  },
+  {
+   "mention": "salt",
+   "label": "salt"
+  },
+  {
+   "mention": "berries",
+   "label": "fruit (unspecified)"
+  },
+  {
+   "mention": "sponge cake",
+   "label": "cake (prepared)"
+  }
+ ],
+ "17": [
+  {
+   "mention": "ham hock",
+   "label": "ham"
+  },
+  {
+   "mention": "stock granuals",
+   "label": "bouillon"
+  },
+  {
+   "mention": "water",
+   "label": "water"
+  }
+ ],
+ "18": [
+  {
+   "mention": "thin sliced chops",
+   "label": "pork"
+  }
+ ],
+ "19": [
+  {
+   "mention": "seasonings",
+   "label": "seasoning (unspecified)"
+  },
+  {
+   "mention": "chicken breasts",
+   "label": "chicken breast"
+  }
+ ],
+ "20": [
+  {
+   "mention": "liquid",
+   "label": "OTHER"
+  },
+  {
+   "mention": "beef",
+   "label": "beef"
+  }
+ ],
+ "21": [],
+ "22": [
+  {
+   "mention": "butter",
+   "label": "butter"
+  },
+  {
+   "mention": "sourdough bread",
+   "label": "bread"
+  },
+  {
+   "mention": "cream",
+   "label": "cream"
+  },
+  {
+   "mention": "raw milk",
+   "label": "milk"
+  },
+  {
+   "mention": "natural salt",
+   "label": "salt"
+  }
+ ],
+ "23": [
+  {
+   "mention": "Choc Chip ice cream",
+   "label": "ice cream"
+  }
+ ],
+ "24": [
+  {
+   "mention": "cream of mushroom soup",
+   "label": "cream of mushroom soup"
+  },
+  {
+   "mention": "water",
+   "label": "water"
+  },
+  {
+   "mention": "baby carrots",
+   "label": "carrot"
+  },
+  {
+   "mention": "mushrooms",
+   "label": "mushroom"
+  },
+  {
+   "mention": "bay leaf",
+   "label": "bay leaf"
+  },
+  {
+   "mention": "kitchen boq",
+   "label": "OTHER"
+  },
+  {
+   "mention": "white bread",
+   "label": "bread"
+  }
+ ],
+ "25": [
+  {
+   "mention": "sugar",
+   "label": "sugar"
+  },
+  {
+   "mention": "tamarind paste",
+   "label": "tamarind"
+  },
+  {
+   "mention": "vinegar",
+   "label": "vinegar"
+  }
+ ]
+}
